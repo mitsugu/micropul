@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>micropul</title>
+	<style>
+		div.contents {
+			width:80%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		h1 {
+			font-size:1.5em;
+			font-weight:bold;
+			text-align:center;
+		}
+		p {
+			margin-top:0em;
+			margin-bottom:0em;
+		}
+		p.description, p.credit {
+			font-style:italic;
+			text-align:center;
+		}
+		div.component {
+			display:flex;
+			align-items:center;
+		}
+		div.component-sub {
+			display:box;
+		}
+		img.component {
+			margin-left:4em;
+		}
+		dl.words {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+		}
+		dl.words dt {
+			font-weight:bold;
+			width:11%;
+		}
+		dl.words dd {
+			display:flex;
+			width:79%;
+		}
+		dl.words dd img {
+			margin-left:1em;
+		}
+		.tilesrules li {
+		}
+		.break {
+			break-after:always;
+			page-break-after:always;
+		}
+	</style>
+</head>
+<body>
+	<div class="contents">
+		<h1>micropul</h1>
+		<p class="description">1 人用のソリティア パズルまたは 2 人用の対戦ゲーム</p>
+		<p class="credit">(version 1.2.1) Feb. 24, 2004 © Jean-Francois Lassonde</p>
+		<div class="component">
+			<div class="component-sub">
+				<h2>コンポーネント</h2>
+				<ul>
+					<li>タイル 48 枚</li>
+					<li>マーカー 6 個 (2 色 3 個ずつ)</li>
+				</ul>
+			</div>
+			<img class="component" width="56" height="56" src="images/fig0006.png">
+			<img class="component" width="56" height="56" src="images/fig0009.png">
+			<img class="component" width="56" height="56" src="images/fig0005.png">
+			<img class="component" width="56" height="56" src="images/fig0007.png">
+		</div>
+		<h2>用語</h2>
+		<dl class="words">
+			<dt>コア</dt>
+			<dd class="break">
+				<p>シャッフルされて伏せられたまま積まれたタイルの山。全てのタイルの供給元。</p>
+				<img width="350" height="275" src="images/fig0001.png">
+			</dd>
+			<dt>自分の山札</dt>
+			<dd><p>コアから引いた伏せられたままの自分専用のタイルの山。後述する条件を満たさないとコアから引けない。伏せられたままなので手札になるまでどのようなタイルなのかわからない。上の図ではまだ自分の山札はできていない。<b>最終得点源の 1 つ。</b></p></dd>
+			<dt>手札</dt>
+			<dd><p>最初に配られたタイルとゲームの途中で自分の山札から引いたタイル。最初に配られる 6 枚のタイルを除きタイルは、コア → 自分の山札 → 手札、という具合にやってくる。<b>最終得点源の 1 つ。</b></p></dd>
+			<dt>場</dt>
+			<dd>
+				<p>タイルを並べてゆく場所</p>
+				<img width="350" height="275" src="images/fig0002.png">
+			</dd>
+			<dt>タイル</dt>
+			<dd>
+				<img width="48" height="48" src="images/fig0006.png">
+				<p>マイクロプルや触媒、空白が描かれている。</p>
+			</dd>
+			<dt>マーカー</dt>
+			<dd>
+				<img width="48" height="48" src="images/fig0007.png">
+				<p>場のタイル上のマイクロプルグループに乗せる。マイクロプルグループについては後述する。</p>
+			</dd>
+			<dt>マイクロプル</dt>
+			<dd>
+				<img width="36" height="36" src="images/fig0004.png">
+				<img width="36" height="36" src="images/fig0008.png">
+				<p>タイルに描かれている●と○。</p>
+			</dd>
+			<dt>マイクロプルグループ</dt>
+			<dd>
+				<p>場に出されたタイルによりひとかたまりになったマイクロプルの集まり。<br>右図の赤、青、黄で塗りつぶされているところが閉じており (<b>閉じている</b>とは何かについては次項を参照)、それぞれ閉じたマイクロプルグループをつくっている。<br>閉じたマイクロプルグループにマーカーが置かれると<b>最終得点源の 1 つになる。</b></p>
+				<img width="270" height="345" src="images/fig0003.png">
+			</dd>
+			<dt>閉じている</dt>
+			<dd>
+				<p>　右図で薄緑色のタイルがプレイされる前はまだ閉じたマイクログループは 1 つもできていない。<br>　薄緑色のタイルがプレイされることで、白のマイクロプルグループが白のマイクロプル以外のもので囲まれる。<br>　そのためこれ以降どんなタイルを置こうとも白のマイクロプルグループに白のマイクロプルを隣接させることができなくなり、この白のマイクロプルグループがこれ以上大きくなることはなくなる。<br>　この状態をマイクロプルグループが<b>閉じている</b>と呼ぶ。<br>　この閉じているマイクロプルグループにマーカーが置かれると前述の通り<b>最終得点源の 1 つになる。</b></p>
+				<img width="284" height="254" src="images/fig0017.png">
+			</dd>
+			<dt>触媒</dt>
+			<dd>
+				<img width="36" height="36" src="images/fig0011.png">
+				<img width="36" height="36" src="images/fig0012.png">
+				<img width="36" height="36" src="images/fig0013.png">
+				<p>タイルに描かれている点と＋。マイクロプルと接すると点の数だけコアから自分の山札にタイルを引くことができる。タイルをコアから引くときは伏せたままでなければならない。＋がマイクロプルと接するともう 1 度プレイすることができる。</p>
+			</dd>
+		</dl>
+		<h2>ゲームの目的</h2>
+		<p>以下の 3 つの方法により得点を得、相手の得点を上回ると勝利する。</p>
+		<ol>
+			<li>自分の<b>山札</b>のタイル 1 枚に付き 2 点</li>
+			<li>自分の<b>手札</b>のタイル 1 枚に付き 1 点</li>
+			<li>自分のマーカーが乗せられた、場に広がっているタイル上のマイクロプルグループに含まれるマイクロプル 1 つにつき 1 点 (マイクロプルグループの説明図の赤にマーカーを置いているとすると合計 26 点。青にマーカーを置いているとすると合計 24 点。黄にマーカーを置いているなら合計 4 点)。</li>
+		</ol>
+		<h2>ゲームの手順</h2>
+		<ol class="break">
+			<li>最初に親を決める。</li>
+			<li>親はスタートタイル以外のタイルを伏せたままシャッフルしコアをつくる。</li>
+			<li>各プレイヤーはコアから 6 枚のタイルを引き手札にする。<br>以降はコアから直接タイルを手札にすることはできず、必ず自分の山札を作り、自分の山札から手札にタイルを持ち込まなければならない。</li>
+			<li><p>最初のプレイヤーをランダムに決める。</p></li>
+			<li>
+				<p>最初のプレイヤーから以下の 3 つのうちのどれかを実行することを繰り返す。パスはできない。</p>
+				<ul>
+					<li>手札のタイルを 1 枚、場に出す。タイルを出す際のルールは後述する。</li>
+					<li>自分の山札から自分の手札にタイルを 1 枚補充する。</li>
+					<li>マイクロプルグループに自分のマーカーを乗せる。マーカーを乗せる際のルールは後述する。</li>
+				</ul>
+			</li>
+		</ol>
+		<h2>ゲームの終了</h2>
+		<p>以下のいずれかの場合にゲームは終了する。</p>
+		<ul>
+			<li>コアから最後の 1 枚のタイルが引かれ、自分もしくは相手の山札に加えられた時点でプレイを終了し、得点計算をして勝者を決定する。得点計算についてはゲームの目的を参照。</li>
+			<li>自分の順番だが手札が尽きていてプレイできない。この場合は得点計算を行わず自分の敗戦が決定する。</li>
+		</ul>
+		<h2>タイルを場に出す際のルール</h2>
+		<ul class="tilesrules">
+			<li>プレイするタイルはすでに置かれているタイルに隣接して繋がるように配置しなければならない。</li>
+			<li>
+				<p>タイル同士は下図の #1 のように<b>必ず最低一組の同じ種類のミクロプル同士が接していなければならない。</b></p>
+				<img width="175" height="182" src="images/fig0010.png">
+			</li>
+			<li><p>上図の #2 のように<b>異なる色のマイクロプルは接してはいけない。</b>なので上図の薄緑色のタイルは実際には図のようには置くことができない。タイルを 90 度時計回りに傾けると白のマイクロプルが接し、黒のマイクロプルはどこにも接せず、触媒の点が上のタイルの黒のマイクロプルに接するために置くことができるようになる。</p></li>
+			<li><p>タイルを場に置くことができた場合、置いたタイルのマイクロプルや触媒が隣接タイルの触媒やマイクロプルに接していないかチェックする。このチェックをなせずるのかというと、マイクロプルと点の触媒に接していた場合に点の数だけコアから<b>自分の山札</b>にタイルを伏せた状態で引くことができるから。</p></li>
+			<li><p>似たような条件で＋の触媒がマイクロプルに接する場合は、プレイヤーはもう 1 度プレイ (1 度のみの連続プレイ) をすることができる。</p></li>
+		</ul>
+	</div>
+</body>
+</html>
